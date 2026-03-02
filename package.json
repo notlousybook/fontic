@@ -2,7 +2,7 @@
 	"name": "fontic",
 	"displayName": "Fontic",
 	"description": "Change UI Interface font for vscode (yes the editor itself). Just that.",
-	"version": "1.2.1",
+	"version": "1.2.2",
 	"publisher": "notlousybook",
 	"icon": "assets/fontic.png",
 	"repository": "https://github.com/notlousybook/fontic.git",

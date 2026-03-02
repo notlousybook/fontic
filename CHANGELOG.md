@@ -4,6 +4,10 @@ All notable changes to the "fontic" extension will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.2.2] - 2026-02-03
+
+- Rename "fonted" to "fontic"
+
 ## [1.2.1] - 2026-02-03
 
 - Improved error handling and user-facing error messages
