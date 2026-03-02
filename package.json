@@ -2,7 +2,7 @@
 	"name": "fonted",
 	"displayName": "fonted",
 	"description": "Change UI font for vscode. Just that.",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"publisher": "degreat",
 	"icon": "assets/fonted.png",
 	"repository": "https://github.com/blackmann/fonted.git",
@@ -10,7 +10,7 @@
 		"vscode": "^1.95.0"
 	},
 	"categories": ["Other"],
-	"activationEvents": ["onCommand:fonted.helloWorld", "onStartupFinished"],
+	"activationEvents": ["onStartupFinished"],
 	"extensionKind": ["ui"],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -22,6 +22,14 @@
 			{
 				"command": "fonted.disable",
 				"title": "Fonted: Disable"
+			},
+			{
+				"command": "fonted.reload",
+				"title": "Fonted: Reload"
+			},
+			{
+				"command": "fonted.revert",
+				"title": "Fonted: Revert UI"
 			}
 		],
 		"configuration": {
@@ -42,27 +50,19 @@
 	"scripts": {
 		"vscode:prepublish": "bun run compile",
 		"compile": "node ./bundle.mjs",
+		"bundle:dev": "node ./bundle.mjs --dev",
 		"watch": "tsc -watch -p ./",
 		"pretest": "bun run compile && bun run lint",
-		"lint": "biome check",
+		"lint": "biome check .",
+		"format": "biome format --write .",
 		"test": "node ./out/test/runTest.js"
 	},
 	"devDependencies": {
-		"@types/glob": "^8.0.0",
-		"@types/jsdom": "^20.0.1",
-		"@types/mocha": "^10.0.1",
+		"@biomejs/biome": "^1.9.3",
 		"@types/node": "16.x",
 		"@types/vscode": "^1.74.0",
-		"@typescript-eslint/eslint-plugin": "^5.45.0",
-		"@typescript-eslint/parser": "^5.45.0",
 		"@vscode/test-electron": "^2.2.0",
 		"esbuild": "^0.16.8",
-		"eslint": "^8.28.0",
-		"glob": "^8.0.3",
-		"mocha": "^10.1.0",
 		"typescript": "^4.9.3"
-	},
-	"dependencies": {
-		"@biomejs/biome": "^1.9.3"
 	}
 }
