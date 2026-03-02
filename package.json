@@ -3,15 +3,21 @@
 	"displayName": "fonted",
 	"description": "Change UI font for vscode. Just that.",
 	"version": "1.2.1",
-	"publisher": "degreat",
+	"publisher": "notlousybook",
 	"icon": "assets/fonted.png",
-	"repository": "https://github.com/blackmann/fonted.git",
+	"repository": "https://github.com/notlousybook/fonted.git",
 	"engines": {
 		"vscode": "^1.95.0"
 	},
-	"categories": ["Other"],
-	"activationEvents": ["onStartupFinished"],
-	"extensionKind": ["ui"],
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"extensionKind": [
+		"ui"
+	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
@@ -64,5 +70,6 @@
 		"@vscode/test-electron": "^2.2.0",
 		"esbuild": "^0.16.8",
 		"typescript": "^4.9.3"
-	}
+	},
+	"license": "MIT"
 }
